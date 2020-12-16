@@ -1,0 +1,224 @@
+:root {
+    /*Layout*/
+    --Mobile: 375px;
+    --Desktop: 1440px;
+    /*Colors*/
+    /* Primary*/
+    --Desatured-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    /*Neutral*/
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /*Gradients*/
+    --Gradients1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Gradients2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    /*Typography*/
+    /*Body Copy*/
+    --Font-size: 16px;
+}
+/*[Josefin Sans]*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{font-family: 'Josefin Sans', sans-serif;}
+@media screen and (min-width: 800px) {
+
+
+body {
+    margin: 0;
+    font-size: var(--Font-size);
+}
+.body {
+    background-color: var(--Gradients1);
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "a b"
+    "c b";
+    height: 100vh;
+    background-image: url(src/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+}
+.up {
+    grid-area: a;
+}
+.up > img {
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.right {
+    grid-area: b;
+}
+.right> img:first-child {
+    display: block;
+    height: 100vh;
+}
+.right>img:last-child{
+    display: none;
+}
+.down {
+    grid-area: c;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.down > h1 {
+    letter-spacing: 0.5em;
+    font-size: 3em;
+}
+.down > h1 > span {
+    font-weight: lighter;
+    font-family: 'Josefin Sans';
+    color: var(--Desatured-Red);
+}
+.down > p {
+    margin-right: 40%;
+    font-family: 'Josefin Sans';
+    line-height: 2em;
+    color:var(--Desatured-Red)
+}
+
+.adress {
+    display: flex;
+    align-items: center;
+}
+input {
+    width: 50%;
+    border: var(--Desatured-Red) solid;
+    padding: 1em;
+    border-radius: 2em;
+    outline: none;
+    position: relative;
+}
+
+input::placeholder {
+    color: var(--Desatured-Red);
+
+}
+button {
+    width: 8em;
+    background: linear-gradient(to right, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    border-radius: 2em;
+    padding: 1em;
+    border: none;
+    position: relative;
+    left: -40px;
+    outline: none;
+
+}
+button:hover {
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 255, .2);
+    cursor: pointer;
+    top: -5px;
+}
+.down>span {
+    color: var(--Desatured-Red);
+    margin-left: 1em;
+    font-family: 'Josefin Sans';
+    display: none;
+}
+.error {
+    position: absolute;
+    left: 27%;
+    display: none;
+}
+}
+@media screen and (max-width: 800px) {
+*{margin: 0;}
+.right>img:first-child{
+    display: none;
+}
+.body {
+    background-color: var(--Gradients1);
+    display: grid;
+    grid-template-rows: 10% 40% 50;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c";
+    background-image: url(src/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    margin-bottom: 10%;
+}
+.up {
+    grid-area: a;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.right {
+    margin-top: 5%;
+    grid-area: b;
+}
+.right>img:last-child {
+    width: 100%;
+}
+.down {
+    grid-area: c;
+    text-align: center;
+}
+.down > h1 {
+    margin-top: 10%;
+    letter-spacing: 0.5em;
+    font-size: 3em;
+    margin-bottom: 10%;
+}
+.down > h1 > span {
+    font-weight: lighter;
+    font-family: 'Josefin Sans';
+    color: var(--Desatured-Red);
+}
+.down > p {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Josefin Sans';
+    line-height: 2em;
+    color:var(--Desatured-Red);
+    text-align: center;
+    margin-bottom: 10%;
+}
+.adress {
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+}
+input {
+    width: 50%;
+    border: var(--Desatured-Red) solid;
+    padding: 1em;
+    border-radius: 2em;
+    outline: none;
+    position: relative;
+}
+
+input::placeholder {
+    color: var(--Desatured-Red);
+
+}
+button {
+    width: 8em;
+    background: linear-gradient(to right, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    border-radius: 2em;
+    padding: 1em;
+    border: none;
+    position: relative;
+    left: -40px;
+    outline: none;
+
+}
+button:hover {
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 255, .2);
+    cursor: pointer;
+    top: -5px;
+}
+.down>span {
+    color: var(--Desatured-Red);
+    margin-left: 29%;
+    font-family: 'Josefin Sans';
+    display: none;
+}
+.error {
+    position: absolute;
+    left: 55%;
+    display: none;
+}
+
+
+
+}
